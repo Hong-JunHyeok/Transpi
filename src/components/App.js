@@ -127,7 +127,7 @@ const TransBoxLangInput = styled.select`
     padding: 1rem;
     outline: none;
     border: 1px solid #ced4da;
-    width: 300px;
+    width: 50%;
 `
 const TransBoxBody = styled.div`
     display: flex;
