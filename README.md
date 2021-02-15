@@ -28,7 +28,8 @@ src_lang , target_lang , query모두 require value이므로 공백이 와서는 
 
 ```
 
-사용 스택
+# 사용 기술 스택
+
 ![React](https://img.shields.io/badge/-React-blue)
 ![Styled-component](https://img.shields.io/badge/-Styled--components-red)
 ![Kakao API](https://img.shields.io/badge/-Kakao%20API-yellow)
