@@ -2,7 +2,8 @@
 
 카카오 번역 API를 사용한 번역 웹 애플리케이션
 
-# API사용 
+# API사용
+
 ```javascript
 
 번역 API의 양식은
