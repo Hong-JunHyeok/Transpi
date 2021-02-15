@@ -7,7 +7,9 @@ function Footer({ intro }) {
         <FooterDiv color={"#353646"}>
             <IntroDiv>{intro}</IntroDiv>
             <CopyrightDiv>
-                Copyrightⓒ{getCurrentYear()} Hong-JunHyeok X Kakao All rights reserved.
+                Copyrightⓒ{getCurrentYear()}{" "}
+                <HighLight color={"#ffe812"}>Hong-JunHyeok X Kakao Developer</HighLight> All rights
+                reserved.
             </CopyrightDiv>
         </FooterDiv>
     )
@@ -21,6 +23,7 @@ const FooterDiv = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 4rem;
 `
 const IntroDiv = styled.div`
     color: #f2f2f2;
@@ -29,6 +32,10 @@ const IntroDiv = styled.div`
 
 const CopyrightDiv = styled.div`
     color: #f2f2f2;
+`
+const HighLight = styled.span`
+    color: ${(props) => props.color};
+    font-weight: bold;
 `
 
 export default Footer
