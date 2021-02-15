@@ -5,7 +5,7 @@ import styled from "styled-components"
 function Footer({ intro }) {
     return (
         <FooterDiv color={"#353646"}>
-            <IntroDiv>{intro}</IntroDiv>
+            {/* <IntroDiv>{intro}</IntroDiv> */}
             <CopyrightDiv>
                 Copyrightⓒ{getCurrentYear()}{" "}
                 <HighLight color={"#ffe812"}>Hong-JunHyeok X Kakao Developer</HighLight> All rights

@@ -8,20 +8,38 @@ import { axiosRequest } from "lib/axiosRequest"
 import { queryStyle } from "lib/queryStyle"
 import { CgArrowsExchange } from "react-icons/cg"
 import { getAllLangList } from "lib/getAllLangList"
+import Button from "components/Common/Button"
 
 function App() {
     const [srcLang, setSrcLang] = useState("kr")
     const [targetLang, setTargetLang] = useState("en")
     const [query, setQuery] = useState("안녕")
+    const [result, setResult] = useState("")
+
     const langData = getAllLangList()
     useEffect(() => {
         request()
     }, [])
 
     const request = async () => {
-        await axiosRequest(queryStyle(srcLang, targetLang, query))
+        const data = await axiosRequest(queryStyle(srcLang, targetLang, query))
+        console.log(data)
+        setResult(data.translated_text)
     }
 
+    const onChangeLang = (event) => {
+        const { value, name } = event.target
+        console.log(value, name)
+        if (name === "src") {
+            setSrcLang(value)
+        } else if (name === "target") {
+            setTargetLang(value)
+        }
+    }
+    const onChangeQuery = (event) => {
+        const { value } = event.target
+        setQuery(value)
+    }
     return (
         <>
             <NavBar title={"Transpi"} />
@@ -37,7 +55,9 @@ function App() {
                             >
                                 번역할 언어
                             </div>
-                            <TransBoxLangInput defaultValue={srcLang}>{langData}</TransBoxLangInput>
+                            <TransBoxLangInput value={srcLang} onChange={onChangeLang} name="src">
+                                {langData}
+                            </TransBoxLangInput>
                         </TransBoxLangDiv>
                         <TransBoxLangDiv>
                             <div
@@ -48,21 +68,29 @@ function App() {
                             >
                                 번역될 언어
                             </div>
-                            <TransBoxLangInput defaultValue={targetLang}>
+                            <TransBoxLangInput
+                                value={targetLang}
+                                onChange={onChangeLang}
+                                name="target"
+                            >
                                 {langData}
                             </TransBoxLangInput>
                         </TransBoxLangDiv>
                     </TransBoxHeader>
                     <TransBoxBody>
-                        <TransBoxTextInput></TransBoxTextInput>
+                        <TransBoxTextInput value={query} onChange={onChangeQuery} />
                         <TransBoxTextInput
                             style={{
                                 borderRight: "none",
                             }}
                             readOnly
+                            value={result}
                         ></TransBoxTextInput>
                     </TransBoxBody>
                 </TransBox>
+                <TransBoxButtonDiv>
+                    <Button onClick={() => request()}>번역하기</Button>
+                </TransBoxButtonDiv>
             </Body>
             <Footer intro={intro} />
         </>
@@ -72,14 +100,13 @@ function App() {
 const Body = styled.div`
     padding: 1rem;
     height: 80vh;
-    min-height: 80vh;
     background-color: #f2f2f2;
     padding: 3rem;
 `
 
 const TransBox = styled.div`
     width: 100%;
-    height: 100%;
+    height: 90%;
     background-color: white;
     border: 1px solid #ced4da;
 `
@@ -115,5 +142,11 @@ const TransBoxTextInput = styled.textarea`
     border-right: 1px solid #ced4da;
     font-size: 20px;
     padding: 1rem;
+`
+const TransBoxButtonDiv = styled.div`
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
 export default App
