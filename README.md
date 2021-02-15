@@ -2,6 +2,10 @@
 
 카카오 번역 API를 사용한 번역 웹 애플리케이션
 
+# 완성된 모습
+
+![image](https://user-images.githubusercontent.com/48292190/107934891-f5518b80-6fc3-11eb-8a4b-8916494d99d9.png)
+
 # API사용
 
 ```javascript
@@ -26,3 +30,12 @@ src_lang , target_lang , query모두 require value이므로 공백이 와서는 
 ![Kakao API](https://img.shields.io/badge/-Kakao%20API-yellow)
 ![Axios](https://img.shields.io/badge/-axios-lightgrey)
 ![prop-types](https://img.shields.io/badge/-prop--types-blue)
+
+# 느낀 점
+
+맨날 JsonPlaceholder라는 걸로 fetch연습을 해왔었는데, 이번에 카카오에서 만든 번역API를 사용해보면서, 뭔가 "만든다는" 느낌이 들었다.
+그리고 styled-components의 사용법을 어느정도 감을 잡은것 같고, 스타일링에 대한 자신감이 높아졌다.(외부 자료 한 개도 안보고 개발한 내가 너무 자랑스럽다!)
+
+여기서 멈추지 않고, 카카오의 음성인식 API를 써서, 내가 만든 프로젝트에 도입할 예정이다.
+
+완성도가 높은 느낌이 있어서 굉장히 만족스러운 프로젝트중 하나였다.
