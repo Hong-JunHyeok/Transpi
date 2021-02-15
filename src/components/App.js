@@ -29,14 +29,39 @@ function App() {
                 <TransBox>
                     <TransBoxHeader>
                         <TransBoxLangDiv>
+                            <div
+                                style={{
+                                    fontWeight: "bold",
+                                    marginBottom: "0.5rem",
+                                }}
+                            >
+                                번역할 언어
+                            </div>
                             <TransBoxLangInput defaultValue={srcLang}>{langData}</TransBoxLangInput>
                         </TransBoxLangDiv>
                         <TransBoxLangDiv>
+                            <div
+                                style={{
+                                    fontWeight: "bold",
+                                    marginBottom: "0.5rem",
+                                }}
+                            >
+                                번역될 언어
+                            </div>
                             <TransBoxLangInput defaultValue={targetLang}>
                                 {langData}
                             </TransBoxLangInput>
                         </TransBoxLangDiv>
                     </TransBoxHeader>
+                    <TransBoxBody>
+                        <TransBoxTextInput></TransBoxTextInput>
+                        <TransBoxTextInput
+                            style={{
+                                borderRight: "none",
+                            }}
+                            readOnly
+                        ></TransBoxTextInput>
+                    </TransBoxBody>
                 </TransBox>
             </Body>
             <Footer intro={intro} />
@@ -60,7 +85,7 @@ const TransBox = styled.div`
 `
 const TransBoxHeader = styled.div`
     width: 100%;
-    height: 10vh;
+    height: 20%;
     border-bottom: 1px solid #ced4da;
     display: flex;
 `
@@ -69,6 +94,26 @@ const TransBoxLangDiv = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 `
-const TransBoxLangInput = styled.select``
+const TransBoxLangInput = styled.select`
+    padding: 1rem;
+    outline: none;
+    border: 1px solid #ced4da;
+    width: 300px;
+`
+const TransBoxBody = styled.div`
+    display: flex;
+    height: 100%;
+`
+const TransBoxTextInput = styled.textarea`
+    flex: 1;
+    height: 80%;
+    outline: none;
+    resize: none;
+    border: none;
+    border-right: 1px solid #ced4da;
+    font-size: 20px;
+    padding: 1rem;
+`
 export default App
