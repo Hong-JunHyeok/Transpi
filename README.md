@@ -2,6 +2,10 @@
 
 카카오 번역 API를 사용한 번역 웹 애플리케이션
 
+# 프로젝트 링크
+
+[링크](https://hong-junhyeok.github.io/Transpi/)
+
 # 완성된 모습
 
 ![image](https://user-images.githubusercontent.com/48292190/107934891-f5518b80-6fc3-11eb-8a4b-8916494d99d9.png)
