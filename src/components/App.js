@@ -66,9 +66,10 @@ function App() {
                                 marginTop: "2rem",
                                 cursor: "pointer",
                             }}
-                            onClick={() =>
+                            onClick={() => {
                                 changeValue(srcLang, targetLang, setSrcLang, setTargetLang)
-                            }
+                                changeValue(query, result, setQuery, setResult)
+                            }}
                         />
                         <TransBoxLangDiv>
                             <div
