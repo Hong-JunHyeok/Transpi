@@ -15,6 +15,9 @@
 -   (언어 토글) - 2021-02-16
     ![image](https://user-images.githubusercontent.com/48292190/108014480-52475300-7051-11eb-8d68-742e6eada14f.png)
 
+-   (언어 토글 개선) - 2021-02-16
+    textarea의 값도 함께 변경되도록 개선하였습니다.
+
 # API사용
 
 ```javascript
