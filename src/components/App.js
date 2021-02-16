@@ -8,6 +8,7 @@ import { axiosRequest } from "lib/axiosRequest"
 import { queryStyle } from "lib/queryStyle"
 import { CgArrowsExchange } from "react-icons/cg"
 import { getAllLangList } from "lib/getAllLangList"
+import { changeValue } from "lib/changeValue"
 import Button from "components/Common/Button"
 
 function App() {
@@ -59,6 +60,16 @@ function App() {
                                 {langData}
                             </TransBoxLangInput>
                         </TransBoxLangDiv>
+                        <CgArrowsExchange
+                            size={"2rem"}
+                            style={{
+                                marginTop: "2rem",
+                                cursor: "pointer",
+                            }}
+                            onClick={() =>
+                                changeValue(srcLang, targetLang, setSrcLang, setTargetLang)
+                            }
+                        />
                         <TransBoxLangDiv>
                             <div
                                 style={{
