@@ -10,6 +10,11 @@
 
 ![image](https://user-images.githubusercontent.com/48292190/107934891-f5518b80-6fc3-11eb-8a4b-8916494d99d9.png)
 
+# 추가된 기능
+
+-   (언어 토글) - 2021-02-16
+    ![image](https://user-images.githubusercontent.com/48292190/108014480-52475300-7051-11eb-8d68-742e6eada14f.png)
+
 # API사용
 
 ```javascript
