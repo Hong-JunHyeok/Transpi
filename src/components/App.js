@@ -52,6 +52,7 @@ function App() {
                                 style={{
                                     fontWeight: "bold",
                                     marginBottom: "0.5rem",
+                                    userSelect: "none",
                                 }}
                             >
                                 번역할 언어
@@ -65,6 +66,7 @@ function App() {
                             style={{
                                 marginTop: "2rem",
                                 cursor: "pointer",
+                                userSelect: "none",
                             }}
                             onClick={() => {
                                 changeValue(srcLang, targetLang, setSrcLang, setTargetLang)
@@ -76,6 +78,7 @@ function App() {
                                 style={{
                                     fontWeight: "bold",
                                     marginBottom: "0.5rem",
+                                    userSelect: "none",
                                 }}
                             >
                                 번역될 언어
